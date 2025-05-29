@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <title>Happy Birthday, Lea Mae!</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/main.js"></script>
+</head>
+<body>
+    <!-- Slide 1 -->
+    <div id="transition1" class="transition active" style="background-image: url('static/bg1.jpg');">
+        <h1>Hey Lea Mae!</h1>
+        <p>Guess what day it is? <span role="img" aria-label="party">&#129395;</span></p>
+        <button onclick="nextTransition(1)">Next</button>
+    </div>
+    <!-- Slide 2 -->
+    <div id="transition2" class="transition" style="background-image: url('static/bg2.jpg');">
+        <h1>It's your Birthday! <span role="img" aria-label="cake">&#127856;</span></h1>
+        <p>Wishing you all the happiness in the world.</p>
+        <button onclick="nextTransition(2)">Next</button>
+    </div>
+    <!-- Slide 3: Balloon Pop Game -->
+    <div id="transition3" class="transition" style="background-image: url('static/bg3.jpg');">
+        <h1>Ready for your surprise?</h1>
+        <p>Pop all the balloons to unlock your surprise!</p>
+        <div class="canvas-wrap" style="margin-top:1rem;">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+        <div id="pop-progress" style="font-size:1.2rem;color:#f2d885;text-shadow:0 1px 8px #000b;"></div>
+        <button id="showSurpriseBtn" style="display:none;margin-top:1.5rem;" onclick="nextTransition(3)">Show Surprise</button>
+    </div>
+    <!-- Final Slide -->
+    <div id="final" class="transition" style="background-image: url('static/bg4.jpg');">
+        <div id="left-message-icon" title="View a message from Mark Glenn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="20" fill="#fffbe8" stroke="#bfa14a" stroke-width="3"/>
+                <path d="M14 20 Q24 28 34 20" stroke="#bfa14a" stroke-width="2.5" fill="none"/>
+                <circle cx="19" cy="18" r="2.5" fill="#bfa14a"/>
+                <circle cx="29" cy="18" r="2.5" fill="#bfa14a"/>
+            </svg>
+        </div>
+        <div class="canvas-wrap">
+            <canvas id="birthdayCanvas"></canvas>
+        </div>
+        <h1>Happy Birthday, Lea Mae! <span role="img" aria-label="party">&#127881;</span></h1>
+        <p>May your day be filled with love, laughter, and cake!</p>
+        <!-- Modal for Mark Glenn message -->
+        <div id="message-modal" class="modal-overlay">
+            <div class="modal-box">
+                <span class="modal-close" id="close-message-modal">&times;</span>
+                <h2>SORRY for everything</h2>
+                <div class="modal-author">by Mark Glenn</div>
+            </div>
+        </div>
+    </div>
+    <script src="static/main.js"></script>
+</body>
+</html>
